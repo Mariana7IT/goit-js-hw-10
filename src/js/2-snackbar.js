@@ -1,10 +1,10 @@
 "use strict"
 
-// Імпорт бібліотек
+
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
-// Функція для створення промісу
+
 function createPromise(delay, state) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -17,7 +17,6 @@ function createPromise(delay, state) {
   });
 }
 
-// Обробник події для форми
 document.querySelector('.form').addEventListener('submit', (event) => {
   event.preventDefault();
 

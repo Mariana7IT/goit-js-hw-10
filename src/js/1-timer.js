@@ -9,12 +9,12 @@ import "izitoast/dist/css/iziToast.min.css";
 
 let userSelectedDate;
 
-// Функція для додавання нуля перед числами менше 10
+
 function addLeadingZero(value) {
   return String(value).padStart(2, '0');
 }
 
-// Функція для перетворення мілісекунд
+
 function convertMs(ms) {
   const second = 1000;
   const minute = second * 60;
@@ -29,7 +29,7 @@ function convertMs(ms) {
   return { days, hours, minutes, seconds };
 }
 
-// Ініціалізація flatpickr
+
 flatpickr("#datetime-picker", {
   enableTime: true,
   time_24hr: true,
@@ -50,7 +50,7 @@ flatpickr("#datetime-picker", {
   },
 });
 
-// Обробник події для кнопки "Start"
+
 document.querySelector('[data-start]').addEventListener('click', () => {
   const timerFields = document.querySelectorAll('.value');
   const intervalId = setInterval(() => {
