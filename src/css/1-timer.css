@@ -1,4 +1,4 @@
-input {
+input[type="text"]{
     width: 272px;
     height: 40px;
     padding-top: 8px;
@@ -36,6 +36,7 @@ letter-spacing: 0.04em;
     width: 346px;
     height: 72px;
     padding-left: 40px;
+    text-transform: uppercase;
 }
 
 .field{
@@ -75,7 +76,7 @@ letter-spacing: 0.04em;
     color: #2E2F42;
 }
 
-button {
+button[type="button"]{
     border-radius: 8px;
     border: none;
     background: #CFCFCF;
