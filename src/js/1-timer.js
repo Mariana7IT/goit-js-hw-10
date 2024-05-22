@@ -8,7 +8,7 @@ import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
 let userSelectedDate;
-
+let intervalId;
 
 function addLeadingZero(value) {
   return String(value).padStart(2, '0');
@@ -52,14 +52,22 @@ flatpickr("#datetime-picker", {
 
 
 document.querySelector('[data-start]').addEventListener('click', () => {
+
+  document.querySelector('#datetime-picker').disabled = true;
+  document.querySelector('[data-start]').disabled = true;
+
   const timerFields = document.querySelectorAll('.value');
   const intervalId = setInterval(() => {
     const timeLeft = userSelectedDate - new Date();
     if (timeLeft <= 0) {
       clearInterval(intervalId);
       timerFields.forEach(field => field.textContent = '00');
+
+      document.querySelector('#datetime-picker').disabled = false;
+      document.querySelector('[data-start]').disabled = false;
       return;
     }
+    
     const timeComponents = convertMs(timeLeft);
     timerFields[0].textContent = addLeadingZero(timeComponents.days);
     timerFields[1].textContent = addLeadingZero(timeComponents.hours);
