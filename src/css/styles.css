@@ -8,7 +8,10 @@
 @import url('./styles.css');
 
 
-:root {
+:root {  
+  --montserrat-regular: "Montserrat", sans-serif;
+  --montserrat-medium: "Montserrat", sans-serif;
+
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -23,16 +26,20 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
 
-.montserrat-<uniquifier> {
-  font-family: "Montserrat", sans-serif;
+.montserrat-regular {
+  font-family: var(--montserrat-regular);
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 400;
   font-style: normal;
 }
 
+.montserrat-medium {
+  font-family: var(--montserrat-medium);
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
 .nav-title {
   text-align: center;
   font-size: 64px;
