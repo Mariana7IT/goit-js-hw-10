@@ -198,9 +198,16 @@ input[type="radio"] {
 fieldset {
   display: flex;
   flex-direction: row;
-  padding-left: 48px;
   justify-content: center;
-  
+  gap: 48px;
+}
+.form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form input[type="radio"] {
+  margin-right: 10px;
 }
 
 button[type="submit"] {
@@ -209,7 +216,6 @@ button[type="submit"] {
   background-color: #4E75FF;
   width: 360px;
   height: 40px;
-  gap: 10px;
   border: none;
   color: white;
   padding: 8px 16px;
